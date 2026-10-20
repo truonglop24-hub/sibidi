@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chúc thk mama 20/10 💗</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffe0ed, #f5c5ff, #fff0f5);
+  font-family: Arial, sans-serif;
+  color: #a12d62;
+  text-align: center;
+}
+
+main {
+  padding: 24px 16px;
+  width: 100%;
+  max-width: 430px;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.scene {
+  perspective: 900px;
+  margin: 55px auto 35px;
+  width: min(280px, 85vw);
+  height: 180px;
+}
+
+.envelope {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #ff9fc5;
+  border-radius: 5px;
+  box-shadow: 0 12px 30px #bb608955;
+  cursor: pointer;
+  transform-style: preserve-3d;
+}
+
+.envelope::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffc1d8;
+  clip-path: polygon(0 0, 50% 55%, 100% 0);
+  transform-origin: top;
+  transition: transform 1s;
+  z-index: 4;
+}
+
+.envelope::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #ffb4d0;
+  clip-path: polygon(
+    0 100%, 0 0, 50% 55%,
+    100% 0, 100% 100%
+  );
+}
+
+.seal {
+  position: absolute;
+  z-index: 5;
+  top: 52px;
+  left: calc(50% - 23px);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #e63f79;
+  color: white;
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.3s;
+}
+
+.letter {
+  position: absolute;
+  z-index: 2;
+  left: 10px;
+  right: 10px;
+  bottom: 8px;
+  min-height: 145px;
+  padding: 15px 10px;
+  background: #fffafc;
+  border-radius: 8px;
+  font-size: 14px;
+  line-height: 1.7;
+  transition: transform 1s;
+}
+
+.envelope.open::before {
+  transform: rotateX(180deg);
+  z-index: 1;
+}
+
+.envelope.open .seal {
+  opacity: 0;
+}
+
+.envelope.open .letter {
+  transform: translateY(-115px);
+  z-index: 6;
+}
+
+button {
+  border: 0;
+  border-radius: 30px;
+  padding: 13px 22px;
+  margin: 7px;
+  background: #e94f91;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 5px 14px #b83c7130;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+#message {
+  display: none;
+  margin-top: 25px;
+  padding: 16px;
+  background: #ffffffa8;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #d76b9830;
+}
+
+#message.show {
+  display: block;
+  animation: appear 1.2s ease;
+}
+
+.heart {
+  position: fixed;
+  bottom: -35px;
+  pointer-events: none;
+  animation: fly 5s linear forwards;
+  z-index: 10;
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-top: 28px;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+  <h2>💗 Chúc thk mama 💗</h2>
+  <p>20/10 vui vẻ nha mama 🌷💕</p>
+
+  <div class="scene">
+    <div class="envelope" id="envelope"
+         onclick="openLetter()">
+
+      <div class="letter">
+        <strong>💌 Chúc thk mama 💗</strong><br>
+        Chúc mama 20/10 thật vui vẻ,
+        luôn xinh đẹp, đáng yêu và gặp
+        nhiều may mắn nhé! 🌸💖
+      </div>
+
+      <div class="seal">♥</div>
+    </div>
+  </div>
+
+  <p id="hint">
+    💌 Chạm vào phong bì để mở thư nha!
+  </p>
+
+  <div id="message">
+    <h2>🌸 Gửi mama 🌸</h2>
+
+    <p>
+      Chúc thk mama có một ngày 20/10
+      thật vui vẻ và hạnh phúc nhaaa 💗
+    </p>
+
+    <p>
+      Chúc mama luôn xinh đẹp, đáng yêu,
+      lúc nào cũng cười thật tươi,
+      gặp toàn chuyện tốt đẹp và may mắn.
+      Mong là ngày nào mama cũng vui,
+      không buồn, không stress nhaaa 🥹💕
+    </p>
+
+    <p>
+      <strong>
+        Happy Women's Day, mamaaa! 💐💖
+      </strong>
+    </p>
+
+    <p>💗🌷🎀🌸💕</p>
+  </div>
+
+  <button onclick="toggleMusic()">
+    🎵 Bật / Tắt nhạc
+  </button>
+
+  <audio id="music" loop preload="none">
+    <source src="nhac.mp3" type="audio/mpeg">
+  </audio>
+
+  <p class="footer">
+    Made with love 💗 | 20.10
+  </p>
+
+</main>
+
+<script>
+let opened = false;
+
+function openLetter() {
+  if (opened) return;
+  opened = true;
+
+  document.getElementById("envelope")
+    .classList.add("open");
+
+  document.getElementById("hint").textContent =
+    "💖 Có một lời chúc dành riêng cho mama!";
+
+  setTimeout(() => {
+    document.getElementById("message")
+      .classList.add("show");
+  }, 500);
+
+  // Hiệu ứng trái tim bay
+  for (let i = 0; i < 30; i++) {
+    setTimeout(() => {
+      const heart = document.createElement("span");
+
+      heart.className = "heart";
+      heart.textContent =
+        ["💗", "💕", "💖", "🌸", "💘"][i % 5];
+
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize =
+        (16 + Math.random() * 18) + "px";
+
+      heart.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6500);
+    }, i * 100);
+  }
+}
+
+async function toggleMusic() {
+  const music = document.getElementById("music");
+
+  try {
+    if (music.paused) {
+      await music.play();
+    } else {
+      music.pause();
+    }
+  } catch (error) {
+    alert(
+      "Chưa tìm thấy nhạc! Hãy thêm tệp nhac.mp3 " +
+      "vào cùng thư mục với index.html nhé."
+    );
+  }
+}
+</script>
+
+</body>
+</html>
